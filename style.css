@@ -1,0 +1,185 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cores do Corinthians */
+:root {
+    --corinthians-preto: #000000;
+    --corinthians-branco: #FFFFFF;
+    --corinthians-dourado: #FFD700; /* Para detalhes e destaque */
+    --corinthians-cinza: #6c757d; /* Para texto mais suave */
+}
+
+.cabecalho {
+    background-color: var(--corinthians-preto);
+    color: var(--corinthians-branco);
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cabecalho nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que os links se ajustem em telas menores */
+}
+
+.cabecalho nav ul li {
+    margin: 0 20px;
+}
+
+.cabecalho nav ul li a {
+    color: var(--corinthians-branco);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.cabecalho nav ul li a:hover {
+    color: var(--corinthians-dourado);
+    transform: translateY(-2px);
+}
+
+.conteudo-principal {
+    padding: 25px;
+    max-width: 960px;
+    margin: 25px auto;
+    background-color: var(--corinthians-branco);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.secao {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--corinthians-cinza);
+}
+
+.secao:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.secao h2 {
+    color: var(--corinthians-preto);
+    border-bottom: 3px solid var(--corinthians-dourado);
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.secao p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.secao ul {
+    list-style: disc;
+    margin-left: 25px;
+    padding-left: 0;
+}
+
+.secao ul li {
+    margin-bottom: 8px;
+}
+
+.rodape {
+    background-color: var(--corinthians-preto);
+    color: var(--corinthians-branco);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+/* Estilo para o código inline */
+code {
+    background-color: #eee;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+/* Botão para a Neo Química Arena */
+.centralizado {
+    text-align: center;
+}
+
+.botao-arena {
+    display: inline-block;
+    background-color: var(--corinthians-dourado);
+    color: var(--corinthians-preto);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.botao-arena:hover {
+    background-color: #e6b800; /* Tom mais escuro do dourado */
+    transform: translateY(-3px);
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .cabecalho nav ul li {
+        margin: 10px 10px;
+    }
+
+    .conteudo-principal {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .secao h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho h1 {
+        font-size: 1.8rem;
+    }
+
+    .cabecalho nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cabecalho nav ul li {
+        margin: 5px 0;
+    }
+}
