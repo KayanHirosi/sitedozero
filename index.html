@@ -114,14 +114,93 @@
             <label><input type="radio" name="q5" value="d"> Mundial de Clubes FIFA</label>
         </div>
 
-        <button type="submit">Verificar Respostas</button>
+        <button type="submit" class="btn-submit">Verificar Respostas</button>
     </form>
 
-    <div id="resultados" style="display:none;">
+    <div id="resultados" class="resultado" style="display:none;">
         <h3>Resultados</h3>
         <p id="resultado-texto"></p>
+        <p><button onclick="window.location.reload()" class="btn-retry">Tentar Novamente</button></p>
     </div>
 </section>
+
+<style>
+    /* Estilos gerais */
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .secao {
+        margin: 30px 0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f8f8f8;
+    }
+
+    h2, h3 {
+        color: #222;
+    }
+
+    .pergunta {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .btn-submit {
+        background-color: #0047ab;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .btn-submit:hover {
+        background-color: #003580;
+    }
+
+    .resultado {
+        background-color: #e6ffe6;
+        padding: 20px;
+        border: 2px solid #28a745;
+        border-radius: 8px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .resultado h3 {
+        font-size: 24px;
+        color: #28a745;
+    }
+
+    .resultado p {
+        font-size: 18px;
+        color: #333;
+    }
+
+    .resultado .btn-retry {
+        background-color: #ff9f00;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+    .resultado .btn-retry:hover {
+        background-color: #e88f00;
+    }
+</style>
 
 <script>
     // Função para verificar as respostas
@@ -161,6 +240,8 @@
         document.getElementById('resultados').style.display = 'block';
     });
 </script>
+
+
 
         
     </main>
